@@ -1,0 +1,133 @@
+<<<<<<< Updated upstream
+=======
+:root {
+	--color-principalColor: #fdfdfd;
+	--color-effectsHover: #bebebe;
+	--color-principalBox: #f0f0f0;
+	--color-boxShadowdDark: #ccc;
+	--color-boxShadowdClear: #ffff;
+}
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-principalColor: #fdfdfd;
+		--color-effectsHover: #4e4e4e;
+		--color-principalBox: #181818;
+		--color-boxShadowdDark: #121212;
+		--color-boxShadowdClear: #1e1e1e;
+	}
+}
+html {
+	font-size: calc(16px + (20 - 16) * (100vw - 320px) / (2500 - 320));
+}
+@media screen and (min-width: 2560px) {
+	html {
+		font-size: calc(16px + (38 - 16) * (100vw - 480px) / (2560 - 480));
+	}
+}
+.header {
+	width: 100%;
+	height: 100vh;
+}
+.menu__contentBar {
+	width: 3.125rem;
+	height: 3.125rem;
+	border-radius: 0.3125rem;
+	margin: 0.625rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	position: relative;
+	background: var(--color-principalBox);
+	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
+		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
+}
+.menu__contentBar::after {
+	content: '';
+	position: absolute;
+	width: 3.125rem;
+	height: 3.125rem;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+}
+@media screen and (min-width: 1024px) {
+	.menu__contentBar {
+		display: none;
+	}
+}
+.menu__barras {
+	background-color: var(--color-principalColor);
+	width: 1.875rem;
+	height: 0.25rem;
+	border-radius: 0.125rem;
+	transition: transform 1s;
+	position: relative;
+}
+.menu__barras::before,
+.menu__barras::after {
+	content: '';
+	position: absolute;
+	background-color: var(--color-principalColor);
+	width: 1.875rem;
+	height: 0.25rem;
+	border-radius: 0.125rem;
+	top: -0.5rem;
+}
+.menu__barras::after {
+	top: 0.5rem;
+}
+.menu__barras--animation {
+	width: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.menu__barras--animation::before,
+.menu__barras--animation::after {
+	top: 0;
+	transform: rotate(-45deg);
+}
+.menu__barras--animation::after {
+	transform: rotate(45deg);
+}
+.menu__contMenu {
+	width: 20rem;
+	padding-left: 0;
+	border-radius: 0.3125rem;
+	margin: auto;
+	list-style: none;
+	background: var(--color-principalBox);
+	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
+		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s, visibility 0.3s;
+}
+@media screen and (min-width: 1024px) {
+	.menu__contMenu {
+		width: 43.75rem;
+		margin-top: 0.625rem;
+		display: flex;
+		justify-content: space-evenly;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.menu__contMenu--show {
+	opacity: 1;
+	visibility: visible;
+}
+.menu__itrem {
+	padding: 0.5rem;
+}
+.menu__link {
+	padding: 0.5rem;
+	text-align: center;
+	font-weight: bold;
+	transition: color 0.3s;
+}
+.menu__link:hover {
+	color: var(--color-effectsHover);
+}
+>>>>>>> Stashed changes
