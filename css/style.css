@@ -1,9 +1,11 @@
 :root {
-	--color-principalColor: #fdfdfd;
+	--color-principalColor: #181818;
 	--color-effectsHover: #bebebe;
 	--color-principalBox: #f0f0f0;
 	--color-boxShadowdDark: #ccc;
 	--color-boxShadowdClear: #ffff;
+	--color-hoverInsetW: #d7d7d7;
+	--color-hoverInsetB: #ffffff;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -12,7 +14,27 @@
 		--color-principalBox: #181818;
 		--color-boxShadowdDark: #121212;
 		--color-boxShadowdClear: #1e1e1e;
+		--color-hoverInsetW: #141414;
+		--color-hoverInsetB: #1c1c1c;
 	}
+}
+html[data-theme='dark'] {
+	--color-principalColor: #fdfdfd;
+	--color-effectsHover: #4e4e4e;
+	--color-principalBox: #181818;
+	--color-boxShadowdDark: #121212;
+	--color-boxShadowdClear: #1e1e1e;
+	--color-hoverInsetW: #141414;
+	--color-hoverInsetB: #1c1c1c;
+}
+html[data-theme='light'] {
+	--color-principalColor: #181818;
+	--color-effectsHover: #bebebe;
+	--color-principalBox: #f0f0f0;
+	--color-boxShadowdDark: #ccc;
+	--color-boxShadowdClear: #ffff;
+	--color-hoverInsetW: #d7d7d7;
+	--color-hoverInsetB: #ffffff;
 }
 html {
 	font-size: calc(16px + (20 - 16) * (100vw - 320px) / (2500 - 320));
@@ -25,6 +47,7 @@ html {
 .header {
 	width: 100%;
 	height: 100vh;
+	position: relative;
 }
 .menu__contentBar {
 	width: 3.125rem;
@@ -127,4 +150,30 @@ html {
 }
 .menu__link:hover {
 	color: var(--color-effectsHover);
+}
+/* config */
+.configPage {
+	padding: 0.625rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.btnCamouflaged {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0.625rem;
+	margin-bottom: 0.625rem;
+	border: 0;
+	border-radius: 50%;
+	cursor: pointer;
+	background: var(--color-principalBox);
+
+	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark);
+}
+.btnCamouflaged:hover {
+	box-shadow: inset 0.3125rem 0.3125rem 0.625rem var(--color-hoverInsetW),
+		inset -0.3125rem -0.3125rem 0.625rem var(--color-hoverInsetB);
+}
+.btnCamouflaged__icon {
+	fill: var(--color-principalColor);
 }
