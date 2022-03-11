@@ -167,12 +167,22 @@ html {
 	border-radius: 50%;
 	cursor: pointer;
 	background: var(--color-principalBox);
-
 	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark);
+	position: relative;
 }
-.btnCamouflaged:hover {
-	box-shadow: inset 0.3125rem 0.3125rem 0.625rem var(--color-hoverInsetW),
-		inset -0.3125rem -0.3125rem 0.625rem var(--color-hoverInsetB);
+.btnCamouflaged::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+@media (hover: hover) {
+	.btnCamouflaged:hover {
+		box-shadow: inset 0.3125rem 0.3125rem 0.625rem var(--color-hoverInsetW),
+			inset -0.3125rem -0.3125rem 0.625rem var(--color-hoverInsetB);
+	}
 }
 .btnCamouflaged__icon {
 	fill: var(--color-principalColor);
