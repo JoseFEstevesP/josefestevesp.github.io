@@ -7,6 +7,15 @@
 	--color-hoverInsetW: #d7d7d7;
 	--color-hoverInsetB: #ffffff;
 }
+html.dark {
+	--color-principalColor: #fdfdfd;
+	--color-effectsHover: #4e4e4e;
+	--color-principalBox: #181818;
+	--color-boxShadowdDark: #121212;
+	--color-boxShadowdClear: #1e1e1e;
+	--color-hoverInsetW: #141414;
+	--color-hoverInsetB: #1c1c1c;
+}
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-principalColor: #fdfdfd;
@@ -17,24 +26,15 @@
 		--color-hoverInsetW: #141414;
 		--color-hoverInsetB: #1c1c1c;
 	}
-}
-html[data-theme='dark'] {
-	--color-principalColor: #fdfdfd;
-	--color-effectsHover: #4e4e4e;
-	--color-principalBox: #181818;
-	--color-boxShadowdDark: #121212;
-	--color-boxShadowdClear: #1e1e1e;
-	--color-hoverInsetW: #141414;
-	--color-hoverInsetB: #1c1c1c;
-}
-html[data-theme='light'] {
-	--color-principalColor: #181818;
-	--color-effectsHover: #bebebe;
-	--color-principalBox: #f0f0f0;
-	--color-boxShadowdDark: #ccc;
-	--color-boxShadowdClear: #ffff;
-	--color-hoverInsetW: #d7d7d7;
-	--color-hoverInsetB: #ffffff;
+	html.light {
+		--color-principalColor: #181818;
+		--color-effectsHover: #bebebe;
+		--color-principalBox: #f0f0f0;
+		--color-boxShadowdDark: #ccc;
+		--color-boxShadowdClear: #ffff;
+		--color-hoverInsetW: #d7d7d7;
+		--color-hoverInsetB: #ffffff;
+	}
 }
 html {
 	font-size: calc(16px + (20 - 16) * (100vw - 320px) / (2500 - 320));
@@ -82,7 +82,6 @@ html {
 	width: 1.875rem;
 	height: 0.25rem;
 	border-radius: 0.125rem;
-	transition: transform 1s;
 	position: relative;
 }
 .menu__barras::before,
@@ -94,6 +93,7 @@ html {
 	height: 0.25rem;
 	border-radius: 0.125rem;
 	top: -0.5rem;
+	transition: transform 0.3s;
 }
 .menu__barras::after {
 	top: 0.5rem;
@@ -167,8 +167,13 @@ html {
 	border-radius: 50%;
 	cursor: pointer;
 	background: var(--color-principalBox);
-	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark);
+	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
+		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
 	position: relative;
+}
+.btnCamouflaged:active {
+	transform: scale(1.09);
+	transition: transform 0.2;
 }
 .btnCamouflaged::after {
 	content: '';
@@ -186,4 +191,48 @@ html {
 }
 .btnCamouflaged__icon {
 	fill: var(--color-principalColor);
+}
+.btnCamouflaged--lagnIcon::before {
+	content: attr(data-lang);
+	position: absolute;
+	width: 17px;
+	height: 12px;
+	top: 0;
+	left: -5px;
+	font-size: 12px;
+	border-radius: 2px;
+	background-color: green;
+}
+/* language */
+.contentLanguage {
+	width: 40px;
+	height: 80px;
+	border-radius: 5px;
+	transform: translateY(-100px);
+	opacity: 0;
+	visibility: hidden;
+	transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+	background: var(--color-principalBox);
+	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
+		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
+}
+.contentLanguage--show {
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+.contentLanguage__Language {
+	width: 40px;
+	height: 40px;
+	border: 0;
+	border-radius: 5px;
+}
+.contentLanguage__Language:active {
+	transform: scale(1.09);
+	transition: transform 0.2s;
+}
+@media (hover: hover) {
+	.contentLanguage__Language:hover {
+		background-color: rgba(71, 125, 243, 0.055);
+	}
 }
