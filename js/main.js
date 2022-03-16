@@ -1,13 +1,13 @@
-const DG = selector => document.getElementById(selector);
-const QAll = selector => document.querySelectorAll(selector);
+import DG, { QAll } from './modules/varConponets.js';
+import './menu.js';
 // menu
-const menuBtn = DG('menuBtn');
-menuBtn.addEventListener('click', e => {
-	e.target.firstElementChild.classList.toggle('menu__barras--animation');
-	e.target.nextElementSibling.firstElementChild.classList.toggle(
-		'menu__contMenu--show'
-	);
-});
+// const menuBtn = DG('menuBtn');
+// menuBtn.addEventListener('click', e => {
+// 	e.target.firstElementChild.classList.toggle('menu__barras--animation');
+// 	e.target.nextElementSibling.firstElementChild.classList.toggle(
+// 		'menu__contMenu--show'
+// 	);
+// });
 // theme
 const btnTheme = DG('btnTheme');
 const iconTheme = DG('iconTheme');
@@ -64,7 +64,7 @@ const changeLanguage = async language => {
 	for (const textToChange of textsToChange) {
 		const section = textToChange.dataset.section;
 		const value = textToChange.dataset.value;
-		textToChange.textContent = texts[section][value];
+		textToChange.innerHTML = texts[section][value];
 	}
 };
 languageOption.addEventListener('click', e => {
@@ -72,7 +72,6 @@ languageOption.addEventListener('click', e => {
 	language.dataset.lang = e.target.parentElement.dataset.language;
 	localStorage.setItem('lang', e.target.parentElement.dataset.language);
 });
-console.log(localStorage.getItem('lang'));
 if (localStorage.getItem('lang')) {
 	changeLanguage(localStorage.getItem('lang'));
 	language.dataset.lang = localStorage.getItem('lang');

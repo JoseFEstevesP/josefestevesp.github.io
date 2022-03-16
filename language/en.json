@@ -1,8 +1,11 @@
 {
 	"menu": {
-		"sobreMi": "About me",
-		"conocimientos": "Knowledge",
-		"proyectos": "Projects",
-		"contacto": "Contact"
+		"aboutMi": "About me",
+		"knowledge": "Knowledge",
+		"Projects": "Projects",
+		"Contact": "Contact"
+	},
+	"welcom": {
+		"greetings": "Hi I'm <span class= 'welcome__titleDecorate'>José Esteves</span> web developer front-end"
 	}
 }

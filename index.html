@@ -6,10 +6,10 @@
 		<title>José Esteves | Portafolio</title>
 		<link rel="stylesheet" href="./css/resetCss.css" />
 		<link rel="stylesheet" href="./css/style.css" />
-		<script defer src="./js/main.js"></script>
+		<script defer src="./js/main.js" type="module"></script>
 	</head>
 	<body>
-		<header class="hader">
+		<header class="header">
 			<article class="menu">
 				<div class="menu__contentBar" id="menuBtn">
 					<div class="menu__barras"></div>
@@ -21,7 +21,7 @@
 								href="#"
 								class="menu__link"
 								data-section="menu"
-								data-value="sobreMi"
+								data-value="aboutMi"
 								>Sobre mi</a
 							>
 						</li>
@@ -30,8 +30,8 @@
 								href="#"
 								class="menu__link"
 								data-section="menu"
-								data-value="conocimientos"
-								>Conocimientos</a
+								data-value="knowledge"
+								>knowledge</a
 							>
 						</li>
 						<li class="menu__item">
@@ -39,8 +39,8 @@
 								href="#"
 								class="menu__link"
 								data-section="menu"
-								data-value="proyectos"
-								>Proyectos</a
+								data-value="Projects"
+								>Projects</a
 							>
 						</li>
 						<li class="menu__item">
@@ -48,8 +48,8 @@
 								href="#"
 								class="menu__link"
 								data-section="menu"
-								data-value="contacto"
-								>Contacto</a
+								data-value="Contact"
+								>Contact</a
 							>
 						</li>
 					</ul>
@@ -92,6 +92,26 @@
 					</div>
 				</div>
 			</div>
+			<article class="welcome">
+				<div class="welcome__text">
+					<h1
+						class="welcome__title"
+						data-section="welcom"
+						data-value="greetings"
+					>
+						Hola soy
+						<span class="welcome__titleDecorate"> José Esteves </span>
+						desarrollador web front-end
+					</h1>
+				</div>
+				<div class="welcome__contentImg">
+					<img
+						src="./assets/img/jose.jpg"
+						alt="usuario jose"
+						class="welcome__img"
+					/>
+				</div>
+			</article>
 		</header>
 	</body>
 </html>

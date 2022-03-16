@@ -113,9 +113,10 @@ html {
 	transform: rotate(45deg);
 }
 .menu__contMenu {
-	width: 20rem;
+	width: 18.75rem;
 	padding-left: 0;
 	border-radius: 0.3125rem;
+	z-index: 10;
 	margin: auto;
 	list-style: none;
 	background: var(--color-principalBox);
@@ -148,8 +149,14 @@ html {
 	font-weight: bold;
 	transition: color 0.3s;
 }
-.menu__link:hover {
-	color: var(--color-effectsHover);
+@media (hover: hover) {
+	.menu__link:hover {
+		color: var(--color-effectsHover);
+	}
+}
+.menu__link:active {
+	transform: scale(1.09);
+	transition: transform 0.2s;
 }
 /* config */
 .configPage {
@@ -235,4 +242,51 @@ html {
 	.contentLanguage__Language:hover {
 		background-color: rgba(71, 125, 243, 0.055);
 	}
+}
+/* bienvenida */
+.welcome {
+	width: 100%;
+	z-index: -10;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column-reverse;
+}
+@media screen and (min-width: 1024px) {
+	.welcome {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+.welcome__title {
+	font-size: 1.9rem;
+	text-align: center;
+}
+@media screen and (min-width: 1024px) {
+	.welcome__text {
+		margin-right: 1.875rem;
+	}
+	.welcome__title {
+		text-align: left;
+	}
+}
+.welcome__titleDecorate {
+	display: block;
+}
+.welcome__contentImg {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+	outline: 0.0625rem solid var(--color-principalColor);
+	background: var(--color-principalBox);
+	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
+		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
+	overflow: hidden;
+}
+.welcome__img {
+	width: 100%;
+	height: 100%;
 }
