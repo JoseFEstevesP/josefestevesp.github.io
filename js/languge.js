@@ -16,9 +16,9 @@ const changeLanguage = async language => {
 	}
 };
 languageOption.addEventListener('click', e => {
-	changeLanguage(e.target.parentElement.dataset.language);
-	language.dataset.lang = e.target.parentElement.dataset.language;
-	localStorage.setItem('lang', e.target.parentElement.dataset.language);
+	changeLanguage(e.target.dataset.language);
+	language.dataset.lang = e.target.dataset.language;
+	localStorage.setItem('lang', e.target.dataset.language);
 });
 if (localStorage.getItem('lang')) {
 	changeLanguage(localStorage.getItem('lang'));
