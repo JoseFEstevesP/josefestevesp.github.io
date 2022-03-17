@@ -235,6 +235,15 @@ body {
 	height: 2.5rem;
 	padding: 5px;
 	border: 0;
+	position: relative;
+}
+.contentLanguage__Language::after {
+	content: '';
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 2.5rem;
+	height: 2.5rem;
 }
 .contentLanguage__Language:active {
 	transform: scale(1.09);
