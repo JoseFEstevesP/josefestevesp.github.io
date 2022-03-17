@@ -239,11 +239,19 @@ body {
 }
 .contentLanguage__Language::after {
 	content: '';
+<<<<<<< HEAD
 	position: relative;
 	top: 0;
 	left: 0;
 	width: 2.5rem;
 	height: 2.5rem;
+=======
+	position: absolute;
+	width: 2.5rem;
+	height: 2.5rem;
+	top: 0;
+	left: 0;
+>>>>>>> 35cd45abe42211cfce05bd1d58946a90d6608cc4
 }
 .contentLanguage__Language:active {
 	transform: scale(1.09);
