@@ -7,5 +7,8 @@
 	},
 	"welcom": {
 		"greetings": "Hi I'm <span class= 'welcome__titleDecorate'>José Esteves</span> web developer front-end"
+	},
+	"perfil": {
+		"age": "22 years"
 	}
 }
