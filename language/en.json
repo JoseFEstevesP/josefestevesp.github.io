@@ -9,6 +9,11 @@
 		"greetings": "Hi I'm <span class= 'welcome__titleDecorate'>José Esteves</span> web developer front-end"
 	},
 	"perfil": {
-		"age": "22 years"
+		"age": "22 years",
+		"btn": "Download CV"
+	},
+	"technologi": {
+		"titleMain": "Technologies and tools",
+		"secondaryDegree": "Learning"
 	}
 }

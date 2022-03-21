@@ -381,3 +381,44 @@ body {
 	height: 1.4rem;
 	fill: var(--color-principalColor);
 }
+/* tecnologias y heramientas */
+.technology {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+}
+.technology__contentTechnology {
+	width: 20rem;
+	display: grid;
+	gap: 0.625rem;
+	grid-template-columns: repeat(auto-fill, minmax(6.25rem, 1fr));
+}
+@media screen and (min-width: 1024px) {
+	.technology__contentTechnology {
+		width: 31.25rem;
+	}
+}
+.technology__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.technology__itemTechnology {
+	width: 5rem;
+	height: 5rem;
+	padding: 0.625rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.3125rem;
+	background: var(--color-principalBox);
+	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
+		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
+}
+.technology__titleItem {
+	margin-top: 0.3125rem;
+	margin-bottom: 0;
+	text-align: center;
+}

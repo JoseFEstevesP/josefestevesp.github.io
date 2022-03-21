@@ -9,6 +9,11 @@
 		"greetings": "Hola soy <span class='welcome__titleDecorate'> José Esteves </span> desarrollador web front-end"
 	},
 	"perfil": {
-		"age": "22 años"
+		"age": "22 años",
+		"btn": "Descargar CV"
+	},
+	"technologi": {
+		"titleMain": "Tecnologías y herramientas",
+		"secondaryDegree": "Aprendiendo"
 	}
 }
