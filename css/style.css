@@ -348,7 +348,36 @@ body {
 	display: inline-block;
 	text-decoration: underline;
 }
+.infoUser__contentRedes {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 .infoUser__red {
-	width: 1.3rem;
-	height: 1.3rem;
+	width: 1.4rem;
+	height: 1.4rem;
+	display: inline-block;
+	margin-left: 0.625rem;
+}
+.infoUser__red:active {
+	transform: scale(1.09);
+	transition: transform 0.2s;
+}
+.infoUser__red:nth-child(1) {
+	margin-left: 0;
+}
+.btnCamouflaged--cv {
+	width: 10.625rem;
+	padding: 0.625rem;
+	border-radius: 0.3125rem;
+	margin-bottom: 0;
+	margin-left: auto;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.btnCamouflaged__iconSize {
+	width: 1.4rem;
+	height: 1.4rem;
+	fill: var(--color-principalColor);
 }
