@@ -15,5 +15,8 @@
 	"technologi": {
 		"titleMain": "Technologies and tools",
 		"secondaryDegree": "Learning"
+	},
+	"projects": {
+		"FrontendMentor-Title": "Front End Mentor Exercises"
 	}
 }

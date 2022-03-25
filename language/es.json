@@ -15,5 +15,8 @@
 	"technologi": {
 		"titleMain": "Tecnologías y herramientas",
 		"secondaryDegree": "Aprendiendo"
+	},
+	"projects": {
+		"FrontendMentor-Title": "Ejercicios front-end mentor"
 	}
 }
