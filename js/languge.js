@@ -24,6 +24,8 @@ if (localStorage.getItem('lang')) {
 	changeLanguage(localStorage.getItem('lang'));
 	language.dataset.lang = localStorage.getItem('lang');
 } else {
-	changeLanguage(window.navigator.language);
-	language.dataset.lang = window.navigator.language;
+	const defaultLagn = window.navigator.language.split('-');
+	changeLanguage(defaultLagn[0]);
+	language.dataset.lang = defaultLagn[0];
+	console.log(defaultLagn[0]);
 }

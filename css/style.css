@@ -6,6 +6,7 @@
 	--color-boxShadowdClear: #ffff;
 	--color-hoverInsetW: #d7d7d7;
 	--color-hoverInsetB: #ffffff;
+	--color-projects: #fdfdfd99;
 }
 html.dark {
 	--color-principalColor: #fdfdfd;
@@ -15,6 +16,7 @@ html.dark {
 	--color-boxShadowdClear: #1e1e1e;
 	--color-hoverInsetW: #141414;
 	--color-hoverInsetB: #1c1c1c;
+	--color-projects: #18181899;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -25,6 +27,7 @@ html.dark {
 		--color-boxShadowdClear: #1e1e1e;
 		--color-hoverInsetW: #141414;
 		--color-hoverInsetB: #1c1c1c;
+		--color-projects: #18181899;
 	}
 	html.light {
 		--color-principalColor: #181818;
@@ -34,9 +37,11 @@ html.dark {
 		--color-boxShadowdClear: #ffff;
 		--color-hoverInsetW: #d7d7d7;
 		--color-hoverInsetB: #ffffff;
+		--color-projects: #fdfdfd99;
 	}
 }
 html {
+	scroll-behavior: smooth;
 	font-size: calc(16px + (20 - 16) * (100vw - 320px) / (2500 - 320));
 }
 @media screen and (min-width: 2560px) {
@@ -46,6 +51,9 @@ html {
 }
 body {
 	padding-bottom: 1rem;
+}
+.bodyScroll {
+	overflow: hidden;
 }
 .header {
 	width: 100%;
@@ -303,7 +311,9 @@ body {
 }
 /* informacion */
 /* personal */
-
+.info:target {
+	padding-top: 30px;
+}
 .infoUser {
 	width: 20rem;
 	margin: auto;
@@ -561,6 +571,9 @@ body {
 	height: 100%;
 	padding: 0.625rem;
 }
+.projects:target {
+	padding-top: 30px;
+}
 .menuProjects {
 	width: 100%;
 	height: 2.5rem;
@@ -635,7 +648,7 @@ body {
 	opacity: 0;
 	visibility: hidden;
 	transition: opacity 0.2s, visibility 0.2s;
-	background-color: rgba(24, 24, 24, 0.6);
+	background-color: var(--color-projects);
 }
 .project__data--show {
 	opacity: 1;

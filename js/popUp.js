@@ -10,10 +10,13 @@ voucher.addEventListener('click', e => {
 		e.target.parentElement.nextElementSibling.lastElementChild.classList.add(
 			'popup__content--show'
 		);
+		e.target.ownerDocument.body.classList.toggle('bodyScroll');
 	}
 	if (e.target.matches('.popup__btn')) {
 		e.target.nextElementSibling.classList.remove('popup__content--show');
 		e.target.parentElement.classList.remove('popup--show');
+		e.target.ownerDocument.body.classList.toggle('bodyScroll');
+
 		// e.target.nextElementSibling.firstElementChild.setAttribute('src', '#');
 	}
 });
