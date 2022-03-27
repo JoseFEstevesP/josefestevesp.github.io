@@ -15,6 +15,9 @@
 		"titleMain": "Tecnologías y herramientas",
 		"secondaryDegree": "Aprendiendo"
 	},
+	"receipts": {
+		"titleVouchers": "Certificado"
+	},
 	"projects": {
 		"FrontendMentor-Title": "Ejercicios front-end mentor"
 	}

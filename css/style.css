@@ -7,6 +7,9 @@
 	--color-hoverInsetW: #d7d7d7;
 	--color-hoverInsetB: #ffffff;
 	--color-projects: #fdfdfd99;
+	--color-scroll-Bar: #606060;
+	--color-scroll-contentBar: #f9f9f9;
+	--color-scroll-hoverBar: #909090;
 }
 html.dark {
 	--color-principalColor: #fdfdfd;
@@ -17,6 +20,9 @@ html.dark {
 	--color-hoverInsetW: #141414;
 	--color-hoverInsetB: #1c1c1c;
 	--color-projects: #18181899;
+	--color-scroll-Bar: #aaaaaa;
+	--color-scroll-contentBar: #131313;
+	--color-scroll-hoverBar: #717171;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
@@ -28,6 +34,9 @@ html.dark {
 		--color-hoverInsetW: #141414;
 		--color-hoverInsetB: #1c1c1c;
 		--color-projects: #18181899;
+		--color-scroll-Bar: #aaaaaa;
+		--color-scroll-contentBar: #131313;
+		--color-scroll-hoverBar: #717171;
 	}
 	html.light {
 		--color-principalColor: #181818;
@@ -38,6 +47,9 @@ html.dark {
 		--color-hoverInsetW: #d7d7d7;
 		--color-hoverInsetB: #ffffff;
 		--color-projects: #fdfdfd99;
+		--color-scroll-Bar: #606060;
+		--color-scroll-contentBar: #f9f9f9;
+		--color-scroll-hoverBar: #909090;
 	}
 }
 html {
@@ -52,6 +64,23 @@ html {
 body {
 	padding-bottom: 1rem;
 }
+body::-webkit-scrollbar {
+	width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	transition: background-color 0.3s;
+	background-color: var(--color-scroll-Bar);
+}
+body::-webkit-scrollbar-track {
+	border-radius: 5px;
+	background-color: var(--color-scroll-contentBar);
+}
+@media (hover: hover) {
+	body::-webkit-scrollbar-thumb:hover {
+		background-color: var(--color-scroll-hoverBar);
+	}
+}
 .bodyScroll {
 	overflow: hidden;
 }
@@ -59,6 +88,24 @@ body {
 	width: 100%;
 	height: 100vh;
 	position: relative;
+}
+/* img */
+.contentImg {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 100%;
+	border: 0.0625rem solid var(--color-principalColor);
+	background: var(--color-principalBox);
+	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
+		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
+	overflow: hidden;
+}
+.contentImg--center {
+	margin: 0 auto;
+}
+.contentImg img {
+	height: 100%;
+	object-fit: cover;
 }
 .menu__contentBar {
 	width: 3.125rem;
@@ -191,7 +238,7 @@ body {
 }
 .btnCamouflaged:active {
 	transform: scale(1.09);
-	transition: transform 0.2;
+	transition: transform 0.2s;
 }
 .btnCamouflaged::after {
 	content: '';
@@ -299,15 +346,15 @@ body {
 	width: 10rem;
 	height: 10rem;
 	border-radius: 100%;
-	outline: 0.0625rem solid var(--color-principalColor);
+	border: 0.0625rem solid var(--color-principalColor);
 	background: var(--color-principalBox);
 	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
 		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
 	overflow: hidden;
 }
-.welcome__img {
-	width: 100%;
+.welcome__contentImg img {
 	height: 100%;
+	object-fit: cover;
 }
 /* informacion */
 /* personal */
@@ -336,9 +383,9 @@ body {
 	width: 9.375rem;
 	height: 9.375rem;
 	border-radius: 100%;
-	outline: 0.0625rem solid var(--color-principalColor);
+	border: 0.0625rem solid var(--color-principalColor);
 	overflow: hidden;
-	margin: auto;
+	margin: 0 auto;
 }
 .infoUser__date {
 	margin: 1.875rem 0;
@@ -481,7 +528,7 @@ body {
 }
 .voucher__content:active {
 	transform: scale(1.09);
-	transition: transform 0.2;
+	transition: transform 0.2s;
 }
 /* popup */
 .popup {
@@ -490,6 +537,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 20;
 	position: fixed;
 	top: 0;
 	background-color: rgba(204, 204, 204, 0.4);
@@ -522,7 +570,7 @@ body {
 }
 .popup__btn:active {
 	transform: scale(1.09);
-	transition: transform 0.2;
+	transition: transform 0.2s;
 }
 .popup__btn::after {
 	content: '';
@@ -582,6 +630,9 @@ body {
 	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
 		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
 }
+.menuProjects[open] .menuProjects__contentIcon svg {
+	transform: rotate(0deg);
+}
 @media screen and (min-width: 1024px) {
 	.menuProjects {
 		width: 43.75rem;
@@ -599,6 +650,10 @@ body {
 }
 .menuProjects__contentIcon {
 	width: 1.25rem;
+}
+.menuProjects__contentIcon svg {
+	transform: rotate(90deg);
+	transition: transform 0.2s;
 }
 .menuProjects__contentProjec {
 	width: 100%;
@@ -630,15 +685,11 @@ body {
 	position: absolute;
 	top: 0;
 }
-@media (hover: hover) {
-	.project:hover .project__data {
-		opacity: 1;
-		visibility: visible;
-	}
-}
+
 .project__data {
 	width: 15.625rem;
 	height: 18.75rem;
+	cursor: initial;
 	position: absolute;
 	top: 0;
 	display: flex;
@@ -673,4 +724,13 @@ body {
 .project__link:active {
 	transform: scale(1.09);
 	transition: transform 0.2s;
+}
+@media (hover: hover) {
+	.project:hover .project__data {
+		opacity: 1;
+		visibility: visible;
+	}
+	.project__link:hover {
+		color: var(--color-effectsHover);
+	}
 }

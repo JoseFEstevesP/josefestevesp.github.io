@@ -6,7 +6,7 @@
 		<title>José Esteves | Portafolio</title>
 		<link rel="stylesheet" href="./css/resetCss.css" />
 		<link rel="stylesheet" href="./css/style.css" />
-		<script defer src="./js/main.js" type="module"></script>
+		<script src="./js/main.js" type="module"></script>
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 	</head>
 	<body>
@@ -79,7 +79,7 @@
 					<div class="contentLanguage" id="languageOption">
 						<button class="contentLanguage__Language" data-language="es">
 							<img
-								loading=" lazy"
+								loading="lazy"
 								decoding="async"
 								src="assets/icons/es.svg"
 								alt="lenguaje en español"
@@ -87,7 +87,7 @@
 						</button>
 						<button class="contentLanguage__Language" data-language="en">
 							<img
-								loading=" lazy"
+								loading="lazy"
 								decoding="async"
 								src="assets/icons/en.svg"
 								alt="english language"
@@ -108,27 +108,20 @@
 						desarrollador web front-end
 					</h1>
 				</div>
-				<div class="welcome__contentImg">
-					<img
-						loading=" lazy"
-						decoding="async"
-						src="./assets/img/jose.jpg"
-						alt="usuario jose"
-						class="welcome__img"
-					/>
+				<div class="contentImg">
+					<img loading="lazy" src="./assets/img/jose.jpg" alt="usuario jose" />
 				</div>
 			</article>
 		</header>
 		<main class="main">
 			<header class="info" id="sobremi">
 				<article class="infoUser">
-					<div class="infoUser__contentImg">
+					<div class="contentImg contentImg--center">
 						<img
-							loading=" lazy"
+							loading="lazy"
 							decoding="async"
 							src="./assets/img/jose.jpg"
 							alt="imagen"
-							class="infoUser__contentImg"
 						/>
 					</div>
 					<div class="infoUser__contentInfoPersonal">
@@ -187,7 +180,7 @@
 									class="infoUser__red"
 								>
 									<img
-										loading=" lazy"
+										loading="lazy"
 										decoding="async"
 										src="./assets/icons/linkedin.svg"
 										alt="icono de linkedin"
@@ -199,7 +192,7 @@
 									class="infoUser__red"
 								>
 									<img
-										loading=" lazy"
+										loading="lazy"
 										decoding="async"
 										src="./assets/icons/telegram.svg"
 										alt="icono de telegram"
@@ -347,7 +340,7 @@
 					<div class="technology__contentTechnology">
 						<div class="technology__item">
 							<div class="technology__itemTechnology">
-								<svg version="1.2" viewBox="0 0 442.37 270.929">
+								<svg viewBox="0 0 442.37 270.929">
 									<defs>
 										<clipPath id="a">
 											<path
@@ -480,11 +473,17 @@
 					</div>
 				</article>
 				<article class="voucher">
-					<h2 class="voucher__title">Certificado</h2>
+					<h2
+						class="voucher__title"
+						data-section="receipts"
+						data-value="titleVouchers"
+					>
+						Certificado
+					</h2>
 					<div class="voucher__item">
 						<div class="voucher__content">
 							<img
-								loading=" lazy"
+								loading="lazy"
 								decoding="async"
 								src="./assets/img/certificado.png"
 								alt="voucher"
@@ -501,7 +500,7 @@
 							</svg>
 						</button>
 						<div class="popup__content">
-							<img loading=" lazy" decoding="async" src="#" alt="voucher" />
+							<img loading="lazy" decoding="async" src="#" alt="voucher" />
 						</div>
 					</div>
 				</article>
@@ -516,7 +515,7 @@
 						>
 							Ejercicios front-end mentor
 						</h3>
-						<div class="menuProjects__contentIcon">
+						<span class="menuProjects__contentIcon">
 							<svg
 								viewBox="0 0 22 18"
 								fill="none"
@@ -526,7 +525,7 @@
 									d="M0.875 2.5C0.87682 2.17801 0.960715 1.8618 1.11875 1.58125C1.2808 1.29098 1.51746 1.04928 1.80425 0.881154C2.09105 0.713032 2.41756 0.624598 2.75 0.625001L19.25 0.625001C19.583 0.624724 19.91 0.713114 20.1975 0.881088C20.485 1.04906 20.7225 1.29056 20.8858 1.58076C21.049 1.87096 21.132 2.1994 21.1263 2.53231C21.1205 2.86522 21.0263 3.1906 20.8531 3.475L12.6031 16.975C12.436 17.2505 12.2007 17.4783 11.9199 17.6364C11.6391 17.7945 11.3223 17.8776 11 17.8776C10.6777 17.8776 10.3609 17.7945 10.0801 17.6364C9.79932 17.4783 9.564 17.2505 9.39688 16.975L1.14688 3.475C0.970331 3.18032 0.876416 2.84352 0.875 2.5V2.5ZM18.5844 2.875L3.41563 2.875L11 15.2781L18.5844 2.875Z"
 								/>
 							</svg>
-						</div>
+						</span>
 					</summary>
 					<article class="menuProjects__contentProjec">
 						<div class="project">
