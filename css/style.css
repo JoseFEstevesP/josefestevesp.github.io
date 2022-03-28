@@ -752,6 +752,9 @@ body::-webkit-scrollbar-track {
 		width: 31.25rem;
 		flex-direction: row;
 	}
+	.project__title {
+		margin-top: 0;
+	}
 	.project__data {
 		margin-left: 1.875rem;
 	}

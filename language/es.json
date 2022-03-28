@@ -19,6 +19,16 @@
 		"titleVouchers": "Certificado"
 	},
 	"projects": {
-		"FrontendMentor-Title": "Ejercicios front-end mentor"
+		"FrontendMentor-Title": "Ejercicios front-end mentor",
+		"code": "Codigo",
+		"demo": "Pagina",
+		"titlelId-1": "Componente de tarjeta de vista previa de NFT",
+		"descriptionId-1": "Este desafío solo de HTML y CSS es perfecto para cualquiera que esté comenzando o cualquiera que quiera un pequeño proyecto con el que jugar.",
+		"titlelId-2": "Preguntas Frecuentes Tarjeta Acordeón",
+		"descriptionId-2": "En este desafío, estarás construyendo un acordeón de preguntas frecuentes. Este es un patrón de front-end extremadamente común, ¡por lo que es una gran oportunidad para practicar!",
+		"titlelId-3": "Ping single column coming soon page",
+		"descriptionId-3": "Este desafío es ideal para principiantes y ofrece la oportunidad de practicar la validación básica de formularios del lado del cliente.",
+		"titlelId-4": "Huddle landing page with a single introductory section",
+		"descriptionId-4": "Un desafío perfecto para principiantes, este proyecto te ayudará a trabajar con un diseño de dos columnas."
 	}
 }
