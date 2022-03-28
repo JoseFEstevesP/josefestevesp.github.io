@@ -66,15 +66,15 @@ body {
 	padding-bottom: 1rem;
 }
 body::-webkit-scrollbar {
-	width: 8px;
+	width: 0.5rem;
 }
 body::-webkit-scrollbar-thumb {
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 	transition: background-color 0.3s;
 	background-color: var(--color-scroll-Bar);
 }
 body::-webkit-scrollbar-track {
-	border-radius: 5px;
+	border-radius: 0.3125rem;
 	background-color: var(--color-scroll-contentBar);
 }
 @media (hover: hover) {
@@ -95,7 +95,7 @@ body::-webkit-scrollbar-track {
 	width: 10rem;
 	height: 10rem;
 	border-radius: 100%;
-	border: 0.0625rem solid var(--color-principalColor);
+	border: 0.0625rem solid var(--color-bluePrimary);
 	background: var(--color-principalBox);
 	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
 		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
@@ -117,11 +117,10 @@ body::-webkit-scrollbar-track {
 	align-items: center;
 	cursor: pointer;
 	border-radius: 0.3125rem;
-	background: var(--color-principalBox);
+	background-color: var(--color-principalBox);
 	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
 		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
 }
-
 .btn svg {
 	width: 1.5625rem;
 	height: 1.5625rem;
@@ -138,6 +137,73 @@ body::-webkit-scrollbar-track {
 			inset -0.3125rem -0.3125rem 0.625rem var(--color-hoverInsetB);
 	}
 }
+/* modificador btn leng*/
+.btn--leng {
+	border-radius: 100%;
+	position: relative;
+	justify-content: center;
+	margin-bottom: 0.625rem;
+}
+.btn--leng::after {
+	content: '';
+	position: absolute;
+	width: 2.5rem;
+	height: 2.5rem;
+	top: 0;
+	left: 0;
+}
+.btn--leng::before {
+	content: attr(data-lang);
+	position: absolute;
+	width: 1.0625rem;
+	height: 0.75rem;
+	top: 0;
+	left: -0.3125rem;
+	font-size: 0.75rem;
+	border-radius: 0.125rem;
+	background-color: green;
+}
+.btn--leng svg {
+	margin-left: 0;
+}
+/* modificador btn theme */
+.btn--theme {
+	border-radius: 100%;
+	position: relative;
+	justify-content: center;
+	margin-bottom: 0.625rem;
+}
+.btn--theme::after {
+	content: '';
+	position: absolute;
+	width: 2.5rem;
+	height: 2.5rem;
+	top: 0;
+	left: 0;
+}
+.btn--theme img {
+	width: 1.6875rem;
+}
+
+/* modificador btn leng select */
+.btn--lengSelect {
+	padding: 5px;
+	position: relative;
+	justify-content: center;
+	margin-bottom: 0.625rem;
+}
+.btn--lengSelect::after {
+	content: '';
+	position: absolute;
+	width: 2.5rem;
+	height: 2.5rem;
+	top: 0;
+	left: 0;
+}
+.btn--lengSelect img {
+	width: 1.875rem;
+}
+/* menu */
 .menu__contentBar {
 	width: 3.125rem;
 	height: 3.125rem;
@@ -249,96 +315,27 @@ body::-webkit-scrollbar-track {
 }
 /* config */
 .configPage {
-	padding: 0.625rem;
+	padding-right: 0.625rem;
 	position: absolute;
 	top: 0;
 	right: 0;
 }
-.btnCamouflaged {
-	width: 2.5rem;
-	height: 2.5rem;
-	padding: 0.625rem;
-	margin-bottom: 0.625rem;
-	border: 0;
-	border-radius: 50%;
-	cursor: pointer;
-	background: var(--color-principalBox);
-	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
-		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
-	position: relative;
-}
-.btnCamouflaged:active {
-	transform: scale(1.09);
-	transition: transform 0.2s;
-}
-.btnCamouflaged::after {
-	content: '';
-	position: absolute;
-	width: 2.5rem;
-	height: 2.5rem;
-	top: 0;
-	left: 0;
-}
-@media (hover: hover) {
-	.btnCamouflaged:hover {
-		box-shadow: inset 0.3125rem 0.3125rem 0.625rem var(--color-hoverInsetW),
-			inset -0.3125rem -0.3125rem 0.625rem var(--color-hoverInsetB);
-	}
-}
-.btnCamouflaged__icon {
-	fill: var(--color-principalColor);
-}
-.btnCamouflaged--lagnIcon::before {
-	content: attr(data-lang);
-	position: absolute;
-	width: 1.0625rem;
-	height: 0.75rem;
-	top: 0;
-	left: -0.3125rem;
-	font-size: 0.75rem;
-	border-radius: 0.125rem;
-	background-color: green;
-}
 /* language */
 .contentLanguage {
-	width: 2.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
 	border-radius: 0.3125rem;
-	transform: translateY(-50px);
+	transform: translateY(-0.625rem);
 	opacity: 0;
 	visibility: hidden;
 	transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
-	background: var(--color-principalBox);
-	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
-		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
 }
 .contentLanguage--show {
 	transform: translateY(0);
 	opacity: 1;
 	visibility: visible;
-}
-.contentLanguage__Language {
-	width: 2.5rem;
-	height: 2.5rem;
-	padding: 5px;
-	border: 0;
-	position: relative;
-}
-.contentLanguage__Language::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 2.5rem;
-	height: 2.5rem;
-}
-.contentLanguage__Language:active {
-	transform: scale(1.09);
-	transition: transform 0.2s;
-}
-@media (hover: hover) {
-	.contentLanguage__Language:hover {
-		background-color: rgba(71, 125, 243, 0.055);
-	}
 }
 /* bienvenida */
 .welcome {
@@ -373,24 +370,10 @@ body::-webkit-scrollbar-track {
 .welcome__titleDecorate {
 	display: block;
 }
-.welcome__contentImg {
-	width: 10rem;
-	height: 10rem;
-	border-radius: 100%;
-	border: 0.0625rem solid var(--color-principalColor);
-	background: var(--color-principalBox);
-	box-shadow: 0.3125rem 0.3125rem 0.625rem var(--color-boxShadowdDark),
-		-0.3125rem -0.3125rem 0.625rem var(--color-boxShadowdClear);
-	overflow: hidden;
-}
-.welcome__contentImg img {
-	height: 100%;
-	object-fit: cover;
-}
 /* informacion */
 /* personal */
 .info:target {
-	padding-top: 30px;
+	padding-top: 1.25rem;
 }
 .infoUser {
 	width: 20rem;
@@ -410,14 +393,6 @@ body::-webkit-scrollbar-track {
 		align-items: center;
 	}
 }
-.infoUser__contentImg {
-	width: 9.375rem;
-	height: 9.375rem;
-	border-radius: 100%;
-	border: 0.0625rem solid var(--color-principalColor);
-	overflow: hidden;
-	margin: 0 auto;
-}
 .infoUser__date {
 	margin: 1.875rem 0;
 	display: flex;
@@ -430,6 +405,7 @@ body::-webkit-scrollbar-track {
 .infoUser__icon svg {
 	width: 1rem;
 	height: 1rem;
+	fill: var(--color-bluePrimary);
 }
 .infoUser__text {
 	padding-left: 0.625rem;
@@ -651,7 +627,7 @@ body::-webkit-scrollbar-track {
 	padding: 0.625rem;
 }
 .projects:target {
-	padding-top: 30px;
+	padding-top: 1.875rem;
 }
 .menuProjects {
 	width: 100%;
