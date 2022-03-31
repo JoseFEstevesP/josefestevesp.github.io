@@ -1,5 +1,4 @@
 const imgPopUP = document.querySelector('.popup');
-console.log(imgPopUP.firstElementChild);
 export default function popupShow(e) {
 	const imgVoucher = e.target.firstElementChild;
 	imgPopUP.lastElementChild.firstElementChild.setAttribute(
