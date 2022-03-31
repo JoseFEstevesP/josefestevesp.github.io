@@ -1,11 +1,11 @@
 import DG from './modules/varConponets.js';
-import projects from './modules/urlProjects.js';
+import FrontendMentor from './modules/urlProjects.js';
 const templateProjects = document.getElementById('templateProjects').content;
 const contentProjects = DG('contentProjects');
-const paint = () => {
-	contentProjects.textContent = '';
+const paint = ({ content, url }) => {
+	content.textContent = '';
 	const fragmet = document.createDocumentFragment();
-	projects.forEach(item => {
+	url.forEach(item => {
 		const clone = templateProjects.cloneNode(true);
 		const img = clone.querySelector('.project__conteImg img');
 		const title = clone.querySelector('.project__title');
@@ -30,6 +30,6 @@ const paint = () => {
 		demo.setAttribute('href', item.urlDemo);
 		fragmet.appendChild(clone);
 	});
-	contentProjects.appendChild(fragmet);
+	content.appendChild(fragmet);
 };
-paint();
+paint({ content: contentProjects, url: FrontendMentor });

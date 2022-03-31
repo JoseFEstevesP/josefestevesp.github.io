@@ -30,4 +30,5 @@ if (localStorage.getItem('lang')) {
 	changeLanguage(defaultLagn[0]);
 	language.dataset.lang = defaultLagn[0];
 	document.documentElement.setAttribute('lang', defaultLagn[0]);
+	localStorage.setItem('lang', defaultLagn[0]);
 }
