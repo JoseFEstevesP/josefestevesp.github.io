@@ -1,0 +1,29 @@
+.welcome {
+	width: 100%;
+	font-size: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column-reverse;
+}
+@media screen and (min-width: 1024px) {
+	.welcome {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+.welcome__title {
+	font-size: 1.9em;
+	text-align: center;
+}
+@media screen and (min-width: 1024px) {
+	.welcome__text {
+		margin-right: 1.875em;
+	}
+	.welcome__title {
+		text-align: left;
+	}
+}
+.welcome__titleDecorate {
+	display: block;
+}
