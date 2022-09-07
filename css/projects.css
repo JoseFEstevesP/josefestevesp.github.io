@@ -47,6 +47,7 @@
 	grid-template-columns: repeat(auto-fill, minmax(16.25em, auto));
 	gap: 0.9375em;
 	justify-items: center;
+	align-items: center;
 }
 @media screen and (min-width: 1024px) {
 	.menuProjects__contentProject {
@@ -60,10 +61,6 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
-	border-radius: 0.3125em;
-	background: var(--color-principalBox);
-	box-shadow: 0.3125em 0.3125em 0.625em var(--color-boxShandongDark),
-		-0.3125em -0.3125em 0.625em var(--color-boxShadowsClear);
 }
 .project__conteImg {
 	width: 100%;

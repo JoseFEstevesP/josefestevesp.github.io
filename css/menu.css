@@ -18,17 +18,8 @@
 .menu__btn {
 	width: 3.125em;
 	height: 100%;
-	padding: 0.3125em;
-	border: 0;
-	border-radius: 0.3125em;
 	position: relative;
-	display: flex;
 	justify-content: center;
-	align-items: center;
-	background: var(--color-principalBox);
-	box-shadow: 0.3125em 0.3125em 0.625em var(--color-boxShandongDark),
-		-0.3125em -0.3125em 0.625em var(--color-boxShadowsClear);
-	transition: transform 0.3s;
 }
 .menu__btn::after {
 	content: '';
@@ -95,10 +86,6 @@
 	padding: 0;
 	margin: 0 auto;
 	list-style: none;
-	border-radius: 0.3125rem;
-	background: var(--color-principalBox);
-	box-shadow: 0.3125em 0.3125em 0.625em var(--color-boxShandongDark),
-		-0.3125em -0.3125em 0.625em var(--color-boxShadowsClear);
 }
 @media screen and (min-width: 768px) {
 	.menu__ul {
