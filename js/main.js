@@ -3,10 +3,8 @@ import popupShow, { closePopUp } from './modules/popUp.js';
 themeDefault();
 document.addEventListener('click', e => {
 	if (e.target.matches('#menuBtn')) {
-		e.target.firstElementChild.classList.toggle('menu__barras--animation');
-		e.target.nextElementSibling.firstElementChild.classList.toggle(
-			'menu__contMenu--show'
-		);
+		e.target.firstElementChild.classList.toggle('menu__bar--animation');
+		e.target.parentElement.nextElementSibling.classList.toggle('menu__nav--show')
 	}
 	if (e.target.matches('#btnTheme')) {
 		theme();

@@ -9,7 +9,7 @@ const paint = ({ content, url }) => {
 		const clone = templateProjects.cloneNode(true);
 		const img = clone.querySelector('.project__conteImg img');
 		const title = clone.querySelector('.project__title');
-		const tecnologies = clone.querySelector('.project__tecnologies');
+		const tecnologies = clone.querySelector('.project__technologies');
 		const description = clone.querySelector('.project__description');
 		const code = clone.querySelector('.code');
 		const demo = clone.querySelector('.demo');

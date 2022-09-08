@@ -1,26 +1,18 @@
 :root {
-	--color-primaria: #181818;
-	--color-secundario: #f0f0f0;
-	--tipografia-principal: sans-serif;
-}
-html.dark {
-	--color-primaria: #f0f0f0;
-	--color-secundario: #181818;
+	--color-primary: #181818;
+	--color-secondary: #f0f0f0;
+	--font-principal: system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
 	:root {
-		--color-primaria: #f0f0f0;
-		--color-secundario: #181818;
-	}
-	html.light {
-		--color-primaria: #181818;
-		--color-secundario: #f0f0f0;
+		--color-primary: #f0f0f0;
+		--color-secondary: #181818;
 	}
 }
 @media (prefers-contrast: high) {
 	:root {
-		--color-primaria: #000;
-		--color-secundario: #fff;
+		--color-primary: #000;
+		--color-secondary: #fff;
 	}
 }
 @media (prefers-reduced-motion: reduce) {
@@ -30,8 +22,8 @@ html.dark {
 	}
 }
 ::selection {
-	background-color: var(--color-primaria);
-	color: var(--color-secundario);
+	background-color: var(--color-primary);
+	color: var(--color-secondary);
 }
 *,
 *::after,
@@ -51,9 +43,9 @@ body {
 	min-height: 100vh;
 	margin: 0;
 	font-size: 100%;
-	font-family: var(--tipografia-principal);
-	color: var(--color-primaria);
-	background-color: var(--color-secundario);
+	font-family: var(--font-principal);
+	color: var(--color-primary);
+	background-color: var(--color-secondary);
 	font-smooth: always;
 	-webkit-font-smoothing: antialiased;
 	-mox-osx-font-smoothing: grayscale;
@@ -246,13 +238,10 @@ textarea {
 details {
 	display: block;
 }
-
 summary {
 	display: list-item;
-	list-style: none;
 	cursor: pointer;
 }
-
 template {
 	display: none;
 }
