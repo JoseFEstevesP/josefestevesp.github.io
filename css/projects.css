@@ -9,10 +9,6 @@
 .menuProjects {
 	width: 100%;
 	height: 2.5em;
-	border-radius: 0.3125em;
-	background: var(--color-principalBox);
-	box-shadow: 0.3125em 0.3125em 0.625em var(--color-boxShandongDark),
-		-0.3125em -0.3125em 0.625em var(--color-boxShadowsClear);
 }
 .menuProjects[open] .menuProjects__contentIcon svg {
 	transform: rotate(0deg);

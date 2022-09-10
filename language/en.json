@@ -19,16 +19,10 @@
 		"titleVouchers": "Certificate"
 	},
 	"projects": {
-		"FrontendMentor-Title": "Front End Mentor Exercises",
+		"projects-title": "Projects",
 		"code": "Code",
 		"demo": "Demo",
-		"titleId-1": "NFT preview card component",
-		"descriptionId-1": "This HTML and CSS only challenge is perfect for anyone just starting out or anyone who wants a little project to play around with.",
-		"titleId-2": "FAQ Accordion Card",
-		"descriptionId-2": "In this challenge, you will be building an accordion of frequently asked questions. This is an extremely common front-end pattern, so it's a great opportunity to practice!",
-		"titleId-3": "Ping single column coming soon page",
-		"descriptionId-3": "This challenge is ideal for beginners and provides an opportunity to practice basic client-side form validation.",
-		"titleId-4": "Huddle landing page with a single introductory section",
-		"descriptionId-4": "A perfect challenge for beginners, this project will help you work with a two-column layout."
+		"titleId-1": "pokedex and mini game",
+		"descriptionId-1": "This Project is a consumption of the PokeApi, you will be able to see the information of all the Pokémon and play a memory game."
 	}
 }

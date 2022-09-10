@@ -19,16 +19,10 @@
 		"titleVouchers": "Certificado"
 	},
 	"projects": {
-		"FrontendMentor-Title": "Ejercicios front-end mentor",
+		"projects-title": "Poyectos",
 		"code": "Codigo",
 		"demo": "Pagina",
-		"titleId-1": "Componente de tarjeta de vista previa de NFT",
-		"descriptionId-1": "Este desafío solo de HTML y CSS es perfecto para cualquiera que esté comenzando o cualquiera que quiera un pequeño proyecto con el que jugar.",
-		"titleId-2": "Preguntas Frecuentes Tarjeta Acordeón",
-		"descriptionId-2": "En este desafío, estarás construyendo un acordeón de preguntas frecuentes. Este es un patrón de front-end extremadamente común, ¡por lo que es una gran oportunidad para practicar!",
-		"titleId-3": "Ping single column coming soon page",
-		"descriptionId-3": "Este desafío es ideal para principiantes y ofrece la oportunidad de practicar la validación básica de formularios del lado del cliente.",
-		"titleId-4": "Huddle landing page with a single introductory section",
-		"descriptionId-4": "Un desafío perfecto para principiantes, este proyecto te ayudará a trabajar con un diseño de dos columnas."
+		"titleId-1": "Pokedex y mini juego",
+		"descriptionId-1": "Este Proyecto es un consumo de la PokeApi, podrás ver la información de todo los Pokémon y jugar a un juego de memoria."
 	}
 }
