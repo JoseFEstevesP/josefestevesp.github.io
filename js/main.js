@@ -1,12 +1,9 @@
 import { id } from './modules/props.js';
 import themeDefault, { theme } from './modules/theme.js';
 import popupShow, { closePopUp } from './modules/popUp.js';
-import { paint } from './project.js';
-import FrontendMentor from './modules/urlProjects.js';
-const contentProjects = id('contentProjects');
+import { imgDarkMode } from './project.js';
 document.addEventListener('DOMContentLoaded', e => {
 	themeDefault();
-	paint({ content: contentProjects, url: FrontendMentor });
 });
 document.addEventListener('click', e => {
 	if (e.target.matches('#menuBtn')) {
@@ -17,7 +14,7 @@ document.addEventListener('click', e => {
 	}
 	if (e.target.matches('#btnTheme')) {
 		theme();
-		paint({ content: contentProjects, url: FrontendMentor });
+		imgDarkMode();
 	}
 	if (e.target.matches('.voucher__content')) {
 		popupShow(e);
@@ -27,5 +24,3 @@ document.addEventListener('click', e => {
 	}
 });
 import './langue.js';
-
-

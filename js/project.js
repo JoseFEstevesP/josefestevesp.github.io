@@ -1,4 +1,4 @@
-import { id } from './modules/props.js';
+import { id, $$ } from './modules/props.js';
 const templateProjects = document.getElementById('templateProjects').content;
 export const paint = ({ content, url }) => {
 	content.textContent = '';
@@ -13,12 +13,15 @@ export const paint = ({ content, url }) => {
 		const description = $('.project__description');
 		const code = $('.code');
 		const demo = $('.demo');
-		if (document.documentElement.className === 'light') {
-			img.src = `./assets/img/projects/${item.imgLight}`;
-		} else {
+		if (localStorage.getItem('theme') === 'dark') {
 			img.src = `./assets/img/projects/${item.imgDark}`;
+			img.alt = item.imgDark;
+		} else {
+			img.src = `./assets/img/projects/${item.imgLight}`;
+			img.alt = item.imgLight;
 		}
-		img.alt = item.img;
+		img.dataset.urllight = `./assets/img/projects/${item.imgLight}`;
+		img.dataset.urldark = `./assets/img/projects/${item.imgDark}`;
 		title.dataset.value = `titleId-${item.id}`;
 		title.textContent = item.title;
 		technologies.textContent = '';
@@ -36,6 +39,18 @@ export const paint = ({ content, url }) => {
 	});
 	content.appendChild(fragment);
 };
-// import FrontendMentor from './modules/urlProjects.js';
-// const contentProjects = id('contentProjects');
-	// paint({ content: contentProjects, url: FrontendMentor });
+import FrontendMentor from './modules/urlProjects.js';
+const contentProjects = id('contentProjects');
+paint({ content: contentProjects, url: FrontendMentor });
+const allProjectsImgElements = $$('.project__img');
+export const imgDarkMode = () => {
+	for (const imgElements of allProjectsImgElements) {
+		if (localStorage.getItem('theme') === 'dark') {
+			imgElements.src = imgElements.dataset.urldark;
+			imgElements.alt = imgElements.dataset.urldark;
+		} else {
+			imgElements.src = imgElements.dataset.urllight;
+			imgElements.alt = imgElements.dataset.urllight;
+		}
+	}
+};
