@@ -1,4 +1,4 @@
-import { id } from './modules/props.js';
+import { $ } from './modules/props.js';
 import themeDefault, { theme } from './modules/theme.js';
 import popupShow, { closePopUp } from './modules/popUp.js';
 import { imgDarkMode } from './project.js';
@@ -21,6 +21,23 @@ document.addEventListener('click', e => {
 	}
 	if (e.target.matches('.popup__btn')) {
 		closePopUp(e);
+	}
+});
+let target;
+document.addEventListener('keydown', e => {
+	if (e.key === 'Enter') {
+		if (e.target.matches('.voucher__content')) {
+			target = e.target;
+			popupShow(e);
+			setTimeout(() => {
+				$('.popup__btn').focus();
+			}, 500);
+		}
+		if (e.target.matches('.popup__btn')) {
+			setTimeout(() => {
+				target.focus();
+			}, 500);
+		}
 	}
 });
 import './langue.js';
