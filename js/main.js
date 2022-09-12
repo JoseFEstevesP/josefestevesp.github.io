@@ -2,6 +2,7 @@ import { $ } from './modules/props.js';
 import themeDefault, { theme } from './modules/theme.js';
 import popupShow, { closePopUp } from './modules/popUp.js';
 import { imgDarkMode } from './project.js';
+import './components/technologies.js'
 document.addEventListener('DOMContentLoaded', e => {
 	themeDefault();
 });
