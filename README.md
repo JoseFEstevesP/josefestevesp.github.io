@@ -1,7 +1,7 @@
 <h1 align="center">Hola 👋, soy José Esteves</h1>
 <h3 align="center">desarrollador web fronEnd y me gusta el aprendizaje.</h3>
 
-- 🌱 Actualmente estoy aprendiendo **NodeJs y SASS**
+- 🌱 Actualmente estoy aprendiendo **NodeJs**
 
 - 👨‍💻 Todos mis proyectos están disponibles en [josefestevesp.github.io/josefestevesp/](josefestevesp.github.io/josefestevesp/)
 
