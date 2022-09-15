@@ -151,6 +151,6 @@ body::-webkit-scrollbar-track {
 .neo{
 	border-radius: 0.3125em;
 	background: var(--color-principalBox);
-	box-shadow: 0.3125em 0.3125em 0.625em var(--color-boxShandongDark),
-		-0.3125em -0.3125em 0.625em var(--color-boxShadowsClear);
+	box-shadow: 0.3125em 0.3125em 0.3125em var(--color-boxShandongDark),
+		-0.3125em -0.3125em 0.3125em var(--color-boxShadowsClear);
 }

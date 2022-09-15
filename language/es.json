@@ -20,8 +20,8 @@
 	},
 	"projects": {
 		"projects-title": "Poyectos",
-		"code": "Codigo",
-		"demo": "Pagina",
+		"code": "Código",
+		"demo": "Página",
 		"titleId-1": "Pokedex y mini juego",
 		"descriptionId-1": "Este Proyecto es un consumo de la PokeApi, podrás ver la información de todo los Pokémon y jugar a un juego de memoria."
 	}
