@@ -3,7 +3,7 @@
 
 - 🌱 Actualmente estoy aprendiendo **NodeJs**
 
-- 👨‍💻 Todos mis proyectos están disponibles en [Porfolio](https://josefestevesp.github.io/josefestevesp/)
+- 👨‍💻 Todos mis proyectos están disponibles en [Porfolio](https://josefestevesp.github.io)
 
 - 📫 How to reach me **joseEsteves199930@gmail.com**
 
