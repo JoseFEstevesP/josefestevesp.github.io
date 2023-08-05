@@ -1,11 +1,11 @@
+import './components/technologies.js';
+import './langue.js';
+import popupShow, { closePopUp } from './modules/popUp.js';
 import { $ } from './modules/props.js';
 import themeDefault, { theme } from './modules/theme.js';
-import popupShow, { closePopUp } from './modules/popUp.js';
-import { imgDarkMode } from './project.js';
-import './components/technologies.js'
-document.addEventListener('DOMContentLoaded', e => {
-	themeDefault();
-});
+import FrontendMentor from './modules/urlProjects.js';
+import { paint } from './project.js';
+document.addEventListener('DOMContentLoaded', () => themeDefault());
 document.addEventListener('click', e => {
 	if (e.target.matches('#menuBtn')) {
 		e.target.firstElementChild.classList.toggle('menu__bar--animation');
@@ -41,4 +41,17 @@ document.addEventListener('keydown', e => {
 		}
 	}
 });
-import './langue.js';
+const contentProjects = document.getElementById('contentProjects');
+contentProjects.appendChild(paint({ url: FrontendMentor }));
+const allProjectsImgElements = document.querySelectorAll('.project__img');
+const imgDarkMode = () => {
+	for (const imgElements of allProjectsImgElements) {
+		if (localStorage.getItem('theme') === 'dark') {
+			imgElements.src = imgElements.dataset.urldark;
+			imgElements.alt = imgElements.dataset.urldark;
+		} else {
+			imgElements.src = imgElements.dataset.urllight;
+			imgElements.alt = imgElements.dataset.urllight;
+		}
+	}
+};

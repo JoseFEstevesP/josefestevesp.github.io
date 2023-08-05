@@ -127,6 +127,9 @@ body::-webkit-scrollbar-track {
 	box-shadow: 0.3125em 0.3125em 0.625em var(--color-boxShandongDark),
 		-0.3125em -0.3125em 0.625em var(--color-boxShadowsClear);
 }
+.btn--hidden {
+	display: none;
+}
 .btn svg {
 	width: 1.5625em;
 	height: 1.5625em;
@@ -148,7 +151,7 @@ body::-webkit-scrollbar-track {
 	padding-top: 1.25em;
 }
 /* neuMorphism */
-.neo{
+.neo {
 	border-radius: 0.3125em;
 	background: var(--color-principalBox);
 	box-shadow: 0.3125em 0.3125em 0.3125em var(--color-boxShandongDark),

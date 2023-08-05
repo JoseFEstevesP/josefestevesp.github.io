@@ -1,13 +1,13 @@
-import { id, $$ } from './modules/props.js';
+import { Lang } from '../language/language.js';
+import { $$, id } from './modules/props.js';
 const language = id('language');
 language.addEventListener('click', e => {
 	e.target.nextElementSibling.classList.toggle('contentLanguage--show');
 });
 const languageOption = id('languageOption');
-const textsToChange = $$('[data-section]');
-const changeLanguage = async language => {
-	const requestJson = await fetch(`./language/${language}.json`);
-	const texts = await requestJson.json();
+const changeLanguage = language => {
+	const textsToChange = $$('[data-section]');
+	const texts = Lang[language];
 	for (const textToChange of textsToChange) {
 		const section = textToChange.dataset.section;
 		const value = textToChange.dataset.value;
