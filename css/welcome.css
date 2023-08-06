@@ -16,8 +16,12 @@
 	font-size: 1.9em;
 	text-align: center;
 }
+.welcome__text {
+	width: 20em;
+}
 @media screen and (min-width: 1024px) {
 	.welcome__text {
+		width: 31.25em;
 		margin-right: 1.875em;
 	}
 	.welcome__title {
@@ -26,4 +30,5 @@
 }
 .welcome__titleDecorate {
 	display: block;
+	color: var(--color-bluePrimary);
 }

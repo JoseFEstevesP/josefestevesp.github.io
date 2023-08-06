@@ -7,7 +7,7 @@ export const Lang = {
 		},
 		welcome: {
 			greetings:
-				"Hola soy <span class='welcome__titleDecorate'> José Esteves </span> desarrollador web front-end",
+				"Hola soy <span class='welcome__titleDecorate'> José Esteves </span> Programador y Desarrollador de Sistemas WEB",
 		},
 		profile: {
 			age: '23 años',
@@ -40,7 +40,7 @@ export const Lang = {
 		},
 		welcome: {
 			greetings:
-				"Hi I'm <span class= 'welcome__titleDecorate'>José Esteves</span> web developer front-end",
+				"Hi I'm <span class= 'welcome__titleDecorate'>José Esteves</span> WEB Systems Programmer and Developer",
 		},
 		profile: {
 			age: '23 years',
