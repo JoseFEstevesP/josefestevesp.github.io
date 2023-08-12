@@ -17,7 +17,7 @@ const FrontendMentor = [
 		imgLight: 'sgcnLight.png',
 		technologies: ['JavaScript', 'ReactJS'],
 		description: Lang[localStorage.getItem('lang')].projects['descriptionId-2'],
-		urlDemo: 'https://fronend-note.vercel.app/',
+		urlCode: 'https://github.com/JoseFEstevesP/fronend-note',
 	},
 ];
 export default FrontendMentor;
