@@ -1,0 +1,30 @@
+[
+	{
+		"title": "Programas salud - Farmapatria",
+		"description": "Aplicación para gestionar la entrega de medicamentos a pacientes",
+		"image": "/src/assets/img/fp.png",
+		"tags": [
+			"React",
+			"Typescript",
+			"SCSS",
+			"NestJS",
+			"PostgreSQL",
+			"Docker",
+			"Nginx"
+		]
+	},
+	{
+		"title": "Balanceador de carga",
+		"description": "Aplicación para gestionar el balanceador de carga de un servidor",
+		"image": "/src/assets/img/wb.png",
+		"tags": ["Docker", "Nginx", "shell"],
+		"link": "https://github.com/JoseFEstevesP/web-balancer"
+	},
+	{
+		"title": "Generador de pack de iconos",
+		"description": "Aplicación para generar pack de iconos a partir de svg",
+		"image": "/src/assets/img/gp.png",
+		"tags": ["JavaScript", "NodeJS"],
+		"link": "https://github.com/JoseFEstevesP/generate-pack-svg-icons"
+	}
+]
