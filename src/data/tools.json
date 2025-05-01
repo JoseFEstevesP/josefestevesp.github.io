@@ -1,7 +1,0 @@
-[
-	{ "name": "Git", "icon": "git" },
-	{ "name": "GitHub", "icon": "github" },
-	{ "name": "Figma", "icon": "figma" },
-	{ "name": "Docker", "icon": "docker" },
-	{ "name": "Nginx", "icon": "nginx" }
-]
