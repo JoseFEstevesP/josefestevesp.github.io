@@ -1,0 +1,51 @@
+.welcome {
+	width: 100%;
+	height: 100%;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+
+	@media screen and (min-width: 768px) {
+		transform: perspective(1000px) rotateY(-10deg);
+	}
+}
+
+.welcome__title {
+	margin-bottom: var(--margin-title);
+	font-size: 2.5em;
+}
+
+.welcome__name {
+	color: var(--color);
+	font-weight: bold;
+}
+
+.welcome__subTitle {
+	font-size: 1.5em;
+	margin-bottom: var(--margin-subTitle);
+	color: var(--text-secondary);
+}
+
+.welcome__roleDev {
+	color: var(--color-light);
+	font-weight: bold;
+}
+
+.welcome__specialty {
+	color: var(--color-accent);
+	font-weight: bold;
+}
+
+.welcome__description {
+	font-size: 1.1em;
+	line-height: 1.6;
+	color: var(--text-primary);
+	margin-top: 1.5rem;
+	max-width: 600px;
+}
