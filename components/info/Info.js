@@ -5,15 +5,24 @@ class InfoComponent extends HTMLElement {
 		this.location = this.getAttribute('location') || 'Caracas, Venezuela';
 		this.githubUrl =
 			this.getAttribute('github-url') || 'https://github.com/josefestevesp';
+		this.linkedInUrl =
+			this.getAttribute('linkedIn-url') ||
+			'http://www.linkedin.com/in/joseFEstevesP';
 		this.cvPath =
-			this.getAttribute('cv-path') ||
-			'./src/assets/cv/JoseEsteves-Curriculum.pdf';
+			this.getAttribute('cv-path') || './assets/cv/JoseEsteves-Curriculum.pdf';
 		this.profileImage =
-			this.getAttribute('profile-image') || './src/assets/img/profile.jpg';
+			this.getAttribute('profile-image') || './assets/img/profile.jpg';
 	}
 
 	static get observedAttributes() {
-		return ['email', 'location', 'github-url', 'cv-path', 'profile-image'];
+		return [
+			'email',
+			'location',
+			'github-url',
+			'linkedIn-url',
+			'cv-path',
+			'profile-image',
+		];
 	}
 
 	attributeChangedCallback(name, oldValue, newValue) {
@@ -27,6 +36,9 @@ class InfoComponent extends HTMLElement {
 					break;
 				case 'github-url':
 					this.githubUrl = newValue;
+					break;
+				case 'linkedIn-url':
+					this.linkedInUrl = newValue;
 					break;
 				case 'cv-path':
 					this.cvPath = newValue;
@@ -54,7 +66,7 @@ class InfoComponent extends HTMLElement {
         <span class="info__user">
           <span class="info__icon">
             <svg role="img" class="icon info__icon">
-              <use href="./src/assets/icon/p-jose-min.svg#email"></use>
+              <use href="./assets/icon/p-jose-min.svg#email"></use>
             </svg>
           </span>
           ${this.email}
@@ -62,7 +74,7 @@ class InfoComponent extends HTMLElement {
         <span class="info__user">
           <span class="info__icon">
             <svg role="img" class="icon info__icon">
-              <use href="./src/assets/icon/p-jose-min.svg#location"></use>
+              <use href="./assets/icon/p-jose-min.svg#location"></use>
             </svg>
           </span>
           ${this.location}
@@ -70,17 +82,25 @@ class InfoComponent extends HTMLElement {
         <a class="info__user info__link" target="_blank" href="${this.githubUrl}">
           <span class="info__icon">
             <svg role="img" class="icon info__icon">
-              <use href="./src/assets/icon/p-jose-min.svg#github"></use>
+              <use href="./assets/icon/p-jose-min.svg#github"></use>
             </svg>
           </span>
           GitHub
         </a>
+				<a class="info__user info__link" target="_blank" href="${this.linkedInUrl}">
+					<span class="info__icon">
+						<svg role="img" class="icon info__icon">
+							<use href="./assets/icon/p-jose-min.svg#linkedin"></use>
+						</svg>
+					</span>
+					LinkedIn
+				</a>
       </p>
       <a href="${this.cvPath}" class="info__button" download>
         <span class="info__button-text">
           <span class="">
             <svg role="img" class="icon">
-              <use href="./src/assets/icon/p-jose-min.svg#downloader"></use>
+              <use href="./assets/icon/p-jose-min.svg#downloader"></use>
             </svg>
           </span>
           Descargar CV
